@@ -3,7 +3,6 @@ package com.example.a22_04_2022;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -47,8 +46,31 @@ public class MainActivity extends AppCompatActivity {
         finalmente para mostrar esa ventana tienen que usar un metodo
         llamado .show()
          */
-        String mensaje = "Bendito contexto!";
+        int contarvocales = 0;
+
+        for (int i = 0; i < ETPalabra.length(); i++) {
+            String BuscaVocales = ETPalabra.toString();
+            switch (BuscaVocales) {
+                case "a":
+                    contarvocales += 1;
+                    break;
+                case "e":
+                    contarvocales += 1;
+                    break;
+                case "i":
+                    contarvocales += 1;
+                    break;
+                case "o":
+                    contarvocales += 1;
+                    break;
+                case "u":
+                    contarvocales += 1;
+                    break;
+            }
+        }
+        String mensaje = "Hay " + contarvocales + " vocales en el texto ingresado";
         //Metodos y atributos estaticos
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
     }
+
 }
