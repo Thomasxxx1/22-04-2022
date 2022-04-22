@@ -17,13 +17,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         iniciarvistas();
+        /*
         BTNProcesar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mostrarmensaje();
             }
         });
-        // Funcion de flecha (Namda) Investigar
+        */
+        // Funcion de flecha (Lambda) Investigar
         BTNProcesar.setOnClickListener(view -> mostrarmensaje());
     }
 
