@@ -50,24 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < ETPalabra.length(); i++) {
             String BuscaVocales = ETPalabra.toString();
-            switch (BuscaVocales) {
-                case "a":
-                    contarvocales += 1;
-                    break;
-                case "e":
-                    contarvocales += 1;
-                    break;
-                case "i":
-                    contarvocales += 1;
-                    break;
-                case "o":
-                    contarvocales += 1;
-                    break;
-                case "u":
-                    contarvocales += 1;
-                    break;
+            if("a" == BuscaVocales){
+                contarvocales = contarvocales + 1;
             }
         }
+        contarvocales = contarvocales;
+
         String mensaje = "Hay " + contarvocales + " vocales en el texto ingresado";
         //Metodos y atributos estaticos
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
